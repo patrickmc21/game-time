@@ -1,3 +1,13 @@
 canvas {
   border: 1px solid black;
+  /*background-color: transparent;*/
+}
+
+
+
+
+.background {
+  background-image: url('Spring-Cover.png');
+ /* height: 600px;
+  width: 1000px;*/
 }
