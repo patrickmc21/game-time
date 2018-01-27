@@ -68,6 +68,10 @@ h3 {
   box-shadow: 0 0 10px 3px #B5DA45;
 }
 
+.start-button:hover {
+  background-color: #A5A095;
+}
+
 .fa {
   margin-right: 8px;
 }
