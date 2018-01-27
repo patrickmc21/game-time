@@ -27,12 +27,24 @@ Right</li>
 
   </div>
   <div class="game-background hidden">
-  <canvas 
-    id='game'
-    height="600"
-    width="1000">
-    
-  </canvas>
+    <header>
+    <div class="score">Score: <span class="score-value"></span></div>
+    <div class="level">Level: <span class="level-value"></span></div>
+    <div class="lives">Lives: <span class="lives-value"></span></div>
+    </header>
+    <canvas 
+      id='game'
+      height="600"
+      width="1000">
+    </canvas>
+  </div>
+  <div class="level-up hidden">
+    <h2>Level <span class="level-value-screen"></span></h2>
+  </div>
+  <div class="game-over hidden">
+    <h2>Game Over</h2>
+    <p>Score: <span class="game-over-score">150</span></p>
+    <button class="restart-button">Restart Game</button>
   </div>
   <script src="main.bundle.js"></script>
 </body>

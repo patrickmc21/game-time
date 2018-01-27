@@ -1,11 +1,11 @@
 * {
   margin: 0;
   /*font-family: 'Monoton', cursive;*/
-  /*font-family: 'Luckiest Guy', cursive;*/
+  font-family: 'Luckiest Guy', cursive;
 }
 canvas {
-  position: relative;
-  top: 100px;
+  /*position: relative;*/
+  /*top: 100px;*/
   display: block;
   margin: auto;
 }
@@ -26,6 +26,12 @@ h1 {
   /*padding-top: 120px;*/
 }
 
+h2 {
+  text-align: center;
+  font-size: 100px;
+  padding-top: 150px;
+}
+
 h3 {
   text-align: center;
   font-size: 30px;
@@ -34,8 +40,36 @@ h3 {
   letter-spacing: 2px;
 }
 
+header {
+  height: 100px;
+  /*font-family: 'Luckiest Guy', cursive;*/
+  font-size: 24px;
+  display: flex;
+  
+}
+
+header div {
+  padding: 25px;
+}
+
+
+
 .hidden {
   display: none;
+}
+
+.score {
+  width: 366px;
+}
+
+.level {
+  width: 366px;
+  text-align: center;
+}
+
+.lives {
+  width: 366px;
+  text-align: right;
 }
 
 .start-screen {
@@ -43,7 +77,7 @@ h3 {
   width: 1100px;
   background-color: #44413B;
   margin: 20px auto;
-  font-family: 'Luckiest Guy', cursive;
+  /*font-family: 'Luckiest Guy', cursive;*/
 }
 
 .start-screen img {
@@ -53,12 +87,12 @@ h3 {
 
 }
 
-.start-button {
+button {
   border-style: none;
   width: 350px;
   height: 70px;
   background-color: #7B766C;
-  font-family: 'Luckiest Guy', cursive;
+  /*font-family: 'Luckiest Guy', cursive;*/
   font-size: 36px;
   margin: 35px auto;
   display: block;
@@ -68,7 +102,7 @@ h3 {
   box-shadow: 0 0 10px 3px #B5DA45;
 }
 
-.start-button:hover {
+button:hover {
   background-color: #A5A095;
 }
 
@@ -91,3 +125,49 @@ h3 {
   font-size: 30px;
   margin-right: 25px;
 }
+
+.level-up {
+  opacity: .8;
+  background-color: #555555;
+  z-index: 5;
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  top: -720px;
+  margin: auto;
+}
+
+.game-over {
+  opacity: .95;
+  background-color: #555555;
+  z-index: 5;
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  top: -720px;
+  margin: auto;
+  text-align: center;
+}
+
+.game-over h2 {
+  font-size: 100px;
+  font-weight: 400;
+  text-shadow: 4px 0px 3px #B5DA45;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+}
+
+.game-over p {
+  font-size: 36px;
+  margin: 75px;
+}
+
+.game-over button {
+  margin-top: 100px;
+}
+
+
+
+
+
+
