@@ -1,20 +1,20 @@
 * {
   margin: 0;
   /*font-family: 'Monoton', cursive;*/
-  /*font-family: 'Luckiest Guy', cursive;*/
+  font-family: 'Luckiest Guy', cursive;
 }
 canvas {
-  position: relative;
-  top: 100px;
+  /*position: relative;*/
+  /*top: 100px;*/
   display: block;
   margin: auto;
 }
 
 ul {
   padding: 0;   
-  margin: 50px;
-  text-align: center;
-  
+  /*margin-top: 70px;*/
+  margin-top: 85px;
+  text-align: center; 
 }
 
 h1 {
@@ -23,37 +23,78 @@ h1 {
   font-weight: 500;
   color: #B5DA45;
   text-align: center;
-  padding-top: 120px;
+  /*padding-top: 120px;*/
 }
+
+h2 {
+  text-align: center;
+  font-size: 100px;
+  padding-top: 150px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  /*margin-top: 85px;*/
+  padding-top: 145px; 
+  letter-spacing: 2px;
+}
+
+header {
+  height: 100px;
+  /*font-family: 'Luckiest Guy', cursive;*/
+  font-size: 24px;
+  display: flex;
+  
+}
+
+header div {
+  padding: 25px;
+}
+
+
 
 .hidden {
   display: none;
 }
 
-.start-screen {
-  display: relative;
-  top: 20px;
+.score {
+  width: 366px;
+}
 
+.level {
+  width: 366px;
+  text-align: center;
+}
+
+.lives {
+  width: 366px;
+  text-align: right;
+}
+
+.start-screen {
   height: 700px;
   width: 1100px;
   background-color: #44413B;
   margin: 20px auto;
-  font-family: 'Luckiest Guy', cursive;
+  /*font-family: 'Luckiest Guy', cursive;*/
 }
 
 .start-screen img {
   height: 30px;
-  background-color: #44413B;
+  margin-right: 8px;
+  vertical-align: middle;
+
 }
 
-.start-button {
+button {
   border-style: none;
-  width: 300px;
+  width: 350px;
   height: 70px;
   background-color: #7B766C;
-  font-family: 'Luckiest Guy', cursive;
+  /*font-family: 'Luckiest Guy', cursive;*/
   font-size: 36px;
-  margin: auto;
+  margin: 35px auto;
   display: block;
   padding-top: 14px;
   outline: none;
@@ -61,6 +102,9 @@ h1 {
   box-shadow: 0 0 10px 3px #B5DA45;
 }
 
+button:hover {
+  background-color: #A5A095;
+}
 
 .fa {
   margin-right: 8px;
@@ -78,6 +122,52 @@ h1 {
 
 .instructions {
   display: inline-block;
-  font-size: 24px;
+  font-size: 30px;
   margin-right: 25px;
 }
+
+.level-up {
+  opacity: .8;
+  background-color: #555555;
+  z-index: 5;
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  top: -720px;
+  margin: auto;
+}
+
+.game-over {
+  opacity: .95;
+  background-color: #555555;
+  z-index: 5;
+  width: 1100px;
+  height: 700px;
+  position: relative;
+  top: -720px;
+  margin: auto;
+  text-align: center;
+}
+
+.game-over h2 {
+  font-size: 100px;
+  font-weight: 400;
+  text-shadow: 4px 0px 3px #B5DA45;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
+}
+
+.game-over p {
+  font-size: 36px;
+  margin: 75px;
+}
+
+.game-over button {
+  margin-top: 100px;
+}
+
+
+
+
+
+

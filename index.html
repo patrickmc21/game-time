@@ -9,8 +9,10 @@
 </head>
 <body>
   <div class="start-screen">
+    <h3>Kill the muthaf*@kin`</h3>
     <h1>Centipede</h1>
-    <button class="start-button">Start</button>
+    <button class="start-button">Start Game</button>
+
     <ul>
       <li class="instructions"><i class="fa fa-arrow-up" aria-hidden="true"></i>Up</li>
       <li class="instructions"><i class="fa fa-arrow-down" aria-hidden="true"></i>
@@ -20,16 +22,29 @@ Left</li>
       <li class="instructions"><i class="fa fa-arrow-right" aria-hidden="true"></i>
 Right</li>
       <li class="instructions"><img src="images/spacebar.jpg">Shoot</li>
-      <li class="instructions"><img src="images/key-p.svg">Pause</li>
+      <li class="instructions"><img src="images/p-key.svg">Pause</li>
     </ul>
+
   </div>
-  <div class="game-background">
-  <canvas 
-    id='game'
-    height="600"
-    width="1000">
-    
-  </canvas>
+  <div class="game-background hidden">
+    <header>
+    <div class="score">Score: <span class="score-value"></span></div>
+    <div class="level">Level: <span class="level-value"></span></div>
+    <div class="lives">Lives: <span class="lives-value"></span></div>
+    </header>
+    <canvas 
+      id='game'
+      height="600"
+      width="1000">
+    </canvas>
+  </div>
+  <div class="level-up hidden">
+    <h2>Level <span class="level-value-screen"></span></h2>
+  </div>
+  <div class="game-over hidden">
+    <h2>Game Over</h2>
+    <p>Score: <span class="game-over-score">150</span></p>
+    <button class="restart-button">Restart Game</button>
   </div>
   <script src="main.bundle.js"></script>
 </body>
