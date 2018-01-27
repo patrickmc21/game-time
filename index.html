@@ -4,14 +4,33 @@
   <meta charset="utf-8">
   <title>Game Time</title>
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Monoton" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+  <div class="start-screen">
+    <h1>Centipede</h1>
+    <button class="start-button">Start</button>
+    <ul>
+      <li class="instructions"><i class="fa fa-arrow-up" aria-hidden="true"></i>Up</li>
+      <li class="instructions"><i class="fa fa-arrow-down" aria-hidden="true"></i>
+Down</li>
+      <li class="instructions"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+Left</li>
+      <li class="instructions"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+Right</li>
+      <li class="instructions"><img src="images/spacebar.jpg">Shoot</li>
+      <li class="instructions"><img src="images/key-p.svg">Pause</li>
+    </ul>
+  </div>
+  <div class="game-background">
   <canvas 
     id='game'
     height="600"
     width="1000">
     
   </canvas>
+  </div>
   <script src="main.bundle.js"></script>
 </body>
 </html>
