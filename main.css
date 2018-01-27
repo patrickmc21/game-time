@@ -4,15 +4,12 @@
   font-family: 'Luckiest Guy', cursive;
 }
 canvas {
-  /*position: relative;*/
-  /*top: 100px;*/
   display: block;
   margin: auto;
 }
 
 ul {
   padding: 0;   
-  /*margin-top: 70px;*/
   margin-top: 85px;
   text-align: center; 
 }
@@ -23,7 +20,6 @@ h1 {
   font-weight: 500;
   color: #B5DA45;
   text-align: center;
-  /*padding-top: 120px;*/
 }
 
 h2 {
@@ -35,24 +31,19 @@ h2 {
 h3 {
   text-align: center;
   font-size: 30px;
-  /*margin-top: 85px;*/
   padding-top: 145px; 
   letter-spacing: 2px;
 }
 
 header {
   height: 100px;
-  /*font-family: 'Luckiest Guy', cursive;*/
   font-size: 24px;
-  display: flex;
-  
+  display: flex; 
 }
 
 header div {
   padding: 25px;
 }
-
-
 
 .hidden {
   display: none;
@@ -77,14 +68,12 @@ header div {
   width: 1100px;
   background-color: #44413B;
   margin: 20px auto;
-  /*font-family: 'Luckiest Guy', cursive;*/
 }
 
 .start-screen img {
   height: 30px;
   margin-right: 8px;
   vertical-align: middle;
-
 }
 
 button {
@@ -92,7 +81,6 @@ button {
   width: 350px;
   height: 70px;
   background-color: #7B766C;
-  /*font-family: 'Luckiest Guy', cursive;*/
   font-size: 36px;
   margin: 35px auto;
   display: block;
