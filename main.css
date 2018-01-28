@@ -123,6 +123,7 @@ button:hover {
   position: relative;
   top: -720px;
   margin: auto;
+  transition-duration: 1s;
 }
 
 .game-over {
