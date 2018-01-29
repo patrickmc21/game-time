@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="start-screen">
-    <h3>Kill that muthaf*@kin`</h3>
+    <h3>Kill that muthaf*@kin</h3>
     <h1>Centipede</h1>
     <button class="start-button">Start Game</button>
     <ul>
@@ -20,6 +20,7 @@
       <li class="instructions"><img src="images/spacebar.jpg">Shoot</li>
       <li class="instructions"><img src="images/p-key.svg">Pause</li>
     </ul>
+    <button class="high-score-start-button">High Score</button>
   </div>
   <div class="game-background hidden">
     <header>
@@ -41,6 +42,33 @@
     <h2>Game Over</h2>
     <p>Score: <span class="game-over-score">150</span></p>
     <button class="restart-button">Restart Game</button>
+  </div>
+  <div class="new-high-score hidden">
+    <h2>Game Over</h2>
+    <h5> New High Score!</h5>
+    <p>Score: <span class="game-over-high-score"></span></p>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Enter Name">
+    <button class="submit-high-score">Submit High Score</button>
+  </div>
+  <div class="new-game-screen hidden">
+    <h3>Kill that muthaf*@kin</h3>
+    <h1>Centipede</h1>
+    <button class="new-game-button">New Game</button>
+    <ul>
+      <li class="instructions"><i class="fa fa-arrow-up" aria-hidden="true"></i>Up</li>
+      <li class="instructions"><i class="fa fa-arrow-down" aria-hidden="true"></i>Down</li>
+      <li class="instructions"><i class="fa fa-arrow-left" aria-hidden="true"></i>Left</li>
+      <li class="instructions"><i class="fa fa-arrow-right" aria-hidden="true"></i>Right</li>
+      <li class="instructions"><img src="images/spacebar.jpg">Shoot</li>
+      <li class="instructions"><img src="images/p-key.svg">Pause</li>
+    </ul>
+  </div>
+  <div class="high-scores hidden">
+    <h1>High Score</h1>
+    <h5>Name: <span class="high-score-name"></span></h5>
+    <h5>Score: <span class="high-score-value"></span></h5>
+    <button class="hide-score">Close</button>
   </div>
   <script src="main.bundle.js"></script>
 </body>

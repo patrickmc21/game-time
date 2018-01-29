@@ -63,14 +63,16 @@ header div {
   text-align: right;
 }
 
-.start-screen {
+.start-screen,
+.new-game-screen {
   height: 700px;
   width: 1100px;
   background-color: #44413B;
   margin: 20px auto;
 }
 
-.start-screen img {
+.start-screen img,
+.new-game-screen img {
   height: 30px;
   margin-right: 8px;
   vertical-align: middle;
@@ -126,16 +128,49 @@ button:hover {
   transition-duration: 1s;
 }
 
-.game-over {
+.game-over,
+.new-high-score,
+.high-scores {
   opacity: .95;
   background-color: #555555;
   z-index: 5;
   width: 1100px;
   height: 700px;
-  position: relative;
-  top: -720px;
+  position: absolute;
+  top: 0;
   margin: auto;
   text-align: center;
+}
+
+.new-high-score h5,
+.high-scores h5 {
+  margin-bottom: 25px;
+  font-size: 50px;
+  font-weight: 400;
+}
+
+.new-high-score p {
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.new-high-score label {
+  margin-right: 15px;
+  font-size: 20px;
+  font-size: 400;
+  display: inline;
+  vertical-align: middle;
+}
+
+#name {
+  display: inline;
+  height: 40px;
+  width: 300px;
+}
+
+#name::placeholder {
+  font-size: 20px;  
 }
 
 .game-over h2 {
