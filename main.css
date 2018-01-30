@@ -3,6 +3,11 @@
   /*font-family: 'Monoton', cursive;*/
   font-family: 'Luckiest Guy', cursive;
 }
+
+body {
+  background-color: #44413B;
+}
+
 canvas {
   display: block;
   margin: auto;
@@ -45,6 +50,18 @@ header div {
   padding: 25px;
 }
 
+.start-screen,
+.game-background,
+.level-up,
+.game-over,
+.new-high-score,
+.high-scores {
+  position: absolute;
+  top: 4%;
+  left: 12%;
+}
+
+
 .start-screen-buttons {
   display: flex;
   justify-content: center;
@@ -78,7 +95,6 @@ header div {
   height: 700px;
   width: 1100px;
   background-color: #44413B;
-  margin: 20px auto;
 }
 
 .start-screen img,
@@ -117,7 +133,6 @@ button:hover {
   background-image: url('images/Spring-Cover.png');
   background-size: 1100px 700px;
   background-repeat: no-repeat;
-  margin: 20px auto;
 }
 
 .instructions {
@@ -132,9 +147,6 @@ button:hover {
   z-index: 1;
   width: 1100px;
   height: 700px;
-  position: relative;
-  top: -720px;
-  margin: auto;
   transition-duration: 1s;
 }
 
@@ -146,9 +158,6 @@ button:hover {
   z-index: 1;
   width: 1100px;
   height: 700px;
-  position: absolute;
-  top: 0;
-  margin: auto;
   text-align: center;
 }
 
