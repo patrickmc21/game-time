@@ -4,7 +4,7 @@ module.exports = {
   devtool: 'inline-source-map',
   entry: {
     main: "./lib/index.js",
-    test: "mocha!./test/index.js"
+    test: "mocha!./test/index-test.js"
   },
   output: {
     path: __dirname,
