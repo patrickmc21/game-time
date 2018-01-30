@@ -48,4 +48,23 @@ describe('Centipede', function() {
     assert.equal(centipede.hasHead, false);
   })
 
+  it('should have a bob value of 2', function() {
+    let centipede = new Centipede();
+    assert.equal(centipede.bob, 2);
+  })
+
+  it('should change velocity when it hits a boundry', function() {
+    let centipede = new Centipede(300, 990);
+    assert.equal(centipede.vx, 0);
+
+    centipede.move();
+
+    assert.equal(centipede.vx, )
+  })
 })
+
+
+
+
+
+
