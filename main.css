@@ -172,6 +172,10 @@ button:hover {
   background-color: #44413B;
 }
 
+.high-scores h1 {
+  padding-top: 150px;
+}
+
 .new-high-score p {
   margin-bottom: 25px;
   font-size: 30px;
