@@ -26,6 +26,6 @@ describe('Spider Explosion', function() {
 
     assert.equal(spiderExplosion.radius, 4)
     spiderExplosion.move()
-    assert.equal(spiderExplosion.radius, 7);
+    assert.equal(spiderExplosion.radius, 7)
   })
 })
