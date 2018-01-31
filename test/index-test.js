@@ -463,72 +463,159 @@ function characterSpiderCollision() {
 
 // GAME CONTROLS
 
+let gamePause = false;
+let overrideDefault = false;
 
 //move up
-function moveUp(e) {
-  if (e.keyCode == '38' && character.y - character.vy > 400 && gamePause === false) {
-    e.preventDefault();
+function moveUp(keycode) {
+  if (keycode == '38' && character.y - character.vy > 400 && gamePause === false) {
     character.y -= character.vy;
     character.move()
   }  
 }
 
+describe('move character up', function() {
+  it('should move the character up 95px', function() {
+    character.y = 500;
+    assert.equal(character.y, 500);
+    moveUp(38);
+    assert.equal(character.y, 405);
+  })
+  it('should not move the character higher than 400px', function() {
+    character.y = 450;
+    assert.equal(character.y, 450);
+    moveUp(38);
+    assert.equal(character.y, 450);
+  })
+})
+
 //move left
-function moveLeft(e) {
-  if (e.keyCode == '37' 
+function moveLeft(keycode) {
+  if (keycode == '37' 
     && character.x + character.vx > 0 && gamePause === false) {
-    e.preventDefault();
     character.x -= character.vx;
     character.move()
   }  
 }
 
+describe('move character left', function() {
+  it('should move the character left by 20px', function() {
+    character.x = 300;
+    assert.equal(character.x, 300);
+    moveLeft(37);
+    assert.equal(character.x, 280);
+  })
+  it('should not move the character off the screen', function() {
+    character.x = 10;
+    character.vx = -20;
+    assert.equal(character.x, 10);
+    moveLeft(37);
+    assert.equal(character.x, 10);
+  })
+})
+
 //move right
-function moveRight(e) {
-  if (e.keyCode == '39' 
+function moveRight(keycode) {
+  if (keycode == '39' 
     && character.x + character.vx + character.width < 1000 && gamePause === false) {
-    e.preventDefault();
     character.x += character.vx;
     character.move()
   }  
 }
 
+describe('move character right', function() {
+  it('should move the character right by 20px', function() {
+    character.x = 300;
+    character.vx = 20;
+    assert.equal(character.x, 300);
+    moveRight(39);
+    assert.equal(character.x, 320);
+  })
+  it('should should not move the character off the screen', function() {
+    character.x = 990;
+    assert.equal(character.x, 990);
+    moveRight(39);
+    assert.equal(character.x, 990);
+  })
+})
+
 //move down
-function moveDown(e) {
-  if (e.keyCode == '40' && character.y + character.vy < 600 && gamePause === false) {
-    e.preventDefault();
+function moveDown(keycode) {
+  if (keycode == '40' && character.y + character.vy < 600 && gamePause === false) {
     character.y += character.vy;
     character.move()
   } 
 }
 
+describe('move character down', function() {
+  it('should move the character down by 95px', function() {
+    character.y = 400;
+    assert.equal(character.y, 400);
+    moveDown(40);
+    assert.equal(character.y, 495);
+  })
+  it('should not move the character below the screen', function() {
+    character.y = 510;
+    assert.equal(character.y, 510);
+    moveDown(40);
+    assert.equal(character.y, 510);
+  })
+})
+
 //pause game
-function pauseGame(e) {
-  if (e.keyCode == '80' && overrideDefault === false) {
-    e.preventDefault();
+function pauseGame(keycode) {
+  if (keycode == '80' && overrideDefault === false) {
     gamePause = !gamePause;
-    gameLoop();
   }
 }
+
+describe('pause game control', function() {
+  it('should change the boolean of gamePause variable', function() {
+    assert.equal(gamePause, false);
+    pauseGame(80);
+    assert.equal(gamePause, true);
+    pauseGame(80);
+    assert.equal(gamePause, false);
+  })
+})
 
 //next level cheat
-function nextLevelCheat(e) {
-  if (e.keyCode == '49') {
-    e.preventDefault();
+function nextLevelCheat(keycode) {
+  if (keycode == '49') {
     centipedeArray = [];
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
   }
 }
 
+describe('next level cheat', function() {
+  it('should clear the centipede array', function() {
+    centipedeArray = [];
+    activateCentipede();
+    assert.equal(centipedeArray.length, 9);
+    nextLevelCheat(49);
+    assert.equal(centipedeArray.length, 0);
+  })
+})
+
 //shoot
-function shoot(e) {
-  if (e.keyCode == '32' && bulletsArray.length < 1 && gamePause === false) {
-    e.preventDefault();
+function shoot(keycode) {
+  if (keycode == '32' && bulletsArray.length < 1 && gamePause === false) {
     let bullet = new Bullet(character.gunX, character.gunY);
 
     bulletsArray.push(bullet);
   }
 }
+
+describe('shoot function', function(){
+  it('should create a new bullet in the bullet array', function() {
+    bulletsArray = [];
+    assert.equal(gamePause, false);
+    assert.equal(bulletsArray.length, 0);
+    shoot(32);
+    assert.equal(bulletsArray.length, 1);
+  })
+})
+
+
 
 //END CONTROLS
 
