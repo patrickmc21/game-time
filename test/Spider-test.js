@@ -56,14 +56,14 @@ describe('Spider', function() {
   it('should have a random x velocity between 1 and 4', function() {
     let spider = new Spider();
     
-    assert.isAbove(spider.vx, 1);
+    assert.isAtLeast(spider.vx, 1);
     assert.isBelow(spider.vx, 4);
   })
 
   it('should have a random y velocity between 1 and 4', function() {
     let spider = new Spider();
     
-    assert.isAbove(spider.vy, 1);
+    assert.isAtLeast(spider.vy, 1);
     assert.isBelow(spider.vy, 4);
   })
 })
