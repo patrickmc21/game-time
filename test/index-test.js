@@ -7,7 +7,7 @@ const Spider = require('../lib/Spider.js');
 const ExplosionMushroom = require('../lib/Explosion-Mushroom.js')
 const ExplosionCentipede = require('../lib/Explosion-Centipede.js')
 const ExplosionSpider = require('../lib/Explosion-Spider.js')
-const HighScore = require('../lib/HighScore.js')
+const HighScore = require('../lib/High-Score.js')
 
 // drawBlock
 
