@@ -55,21 +55,21 @@ describe('Character', function() {
     assert.equal(character.x, 520);
   }) 
 
-  it.('should move left', function () {
+  it('should move left', function () {
     let character = new Character();
     assert.equal(character.x, 500);
     character.moveLeft();
     assert.equal(character.x, 480);
   }) 
 
-  it.('should move up', function () {
+  it('should move up', function () {
     let character = new Character();
     assert.equal(character.y, 510);
     character.moveUp();
     assert.equal(character.y, 415);
   })  
 
-  it.('should move down', function () {
+  it('should move down', function () {
     let character = new Character();
     assert.equal(character.y, 510);
     character.moveDown();

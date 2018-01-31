@@ -469,8 +469,7 @@ let overrideDefault = false;
 //move up
 function moveUp(keycode) {
   if (keycode == '38' && character.y - character.vy > 400 && gamePause === false) {
-    character.y -= character.vy;
-    character.move()
+    character.moveUp()
   }  
 }
 
@@ -493,8 +492,7 @@ describe('move character up', function() {
 function moveLeft(keycode) {
   if (keycode == '37' 
     && character.x + character.vx > 0 && gamePause === false) {
-    character.x -= character.vx;
-    character.move()
+    character.moveLeft()
   }  
 }
 
@@ -518,8 +516,7 @@ describe('move character left', function() {
 function moveRight(keycode) {
   if (keycode == '39' 
     && character.x + character.vx + character.width < 1000 && gamePause === false) {
-    character.x += character.vx;
-    character.move()
+    character.moveRight()
   }  
 }
 
@@ -542,8 +539,7 @@ describe('move character right', function() {
 //move down
 function moveDown(keycode) {
   if (keycode == '40' && character.y + character.vy < 600 && gamePause === false) {
-    character.y += character.vy;
-    character.move()
+    character.moveDown()
   } 
 }
 
